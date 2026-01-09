@@ -28,7 +28,9 @@ jobs:
       run: python write_test_results.py
 
     - name: Upload test results Excel
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-results
-        path: test_results.xlsx
+        path: |
+          test_results.xlsx
+          reports/**/*.xml
